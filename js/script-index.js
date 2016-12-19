@@ -41,5 +41,11 @@ function renderActivities(activitiesArray) {
 function renderActivity(recipe) {
 	
 }
+/* Función que oculta iconos en index.html y recipe.html */
+$(document).ready(function(){
+    $("#ocultaricono").hide(function(){
+        $(this).hide();
+    });
+});
 
 
