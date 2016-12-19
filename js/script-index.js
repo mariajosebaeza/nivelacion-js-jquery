@@ -48,4 +48,7 @@ $(document).ready(function(){
     });
 });
 
-
+/*etapa 2: pintar una noticia dentro de news */
+$(document).ready(function(){
+	$("#printNews").text('Nuevas recetas');
+});
