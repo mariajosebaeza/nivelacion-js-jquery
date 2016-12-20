@@ -3,7 +3,6 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
-});
 
 
 /*
@@ -11,7 +10,13 @@ $(document).ready( function(){
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
+	for(var i = 0; i < recipesArray.length; i++){
+		if(recipesArray[i].highlighted == true) {
+			var array = recipesArray[i];
+				renderRecipe(array);
+		}
+	}
+	console.log('Recipes:', recipesArray);
 }
 
 /*
@@ -21,8 +26,7 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
-	console.log('Voy a pintar la receta: ', recipe);
-}
+	
 
 
 
@@ -48,7 +52,8 @@ $(document).ready(function(){
     });
 });
 
-/*etapa 2: pintar una noticia dentro de news */
+/*etapa 2: "agregar nuevas recetas" dentro de news */
 $(document).ready(function(){
 	$("#printNews").text('Nuevas recetas');
 });
+
